@@ -151,5 +151,3 @@ We've seen how one determines the starting point of our visualization and the ot
   }).remove();
 ```
 The exit() method serves the purpose of cleansing or cleaning the no-longer-used DOM items in our visualization. This is helpful because it allows us to join our data with DOM elements, keeping them in sync. An easy way to remember this is as follows: if there are more data elements than DOM elements, the enter() section will be invoked; if there are fewer data elements than DOM elements, the exit() section will be invoked. In the previous example, we just removed the DOM element if there was no matching data.
-
-## Fetch Function

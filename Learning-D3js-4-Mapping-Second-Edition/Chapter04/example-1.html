@@ -18,8 +18,10 @@
 </head>
 <body>
   <div id="map"></div>
-  <script src="../lib/d3.v4.min.js"></script>
-  <script src="../lib/topojson.v1.min.js"></script>
+  <!-- <script src="../lib/d3.v4.min.js"></script>
+  <script src="../lib/topojson.v1.min.js"></script> -->
+  <script src="http://d3js.org/d3.v4.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
 
   <script>
     (function() {
@@ -38,11 +40,11 @@
           .attr("width", width)
           .attr("height", height);
 
-      d3.json('geo-data.json', function(error, data) {
+      d3.json('../../swiss-maps.json', function(error, data) {
         if(error) return;
 
         console.log('mexico', data);
-        var states = topojson.feature(data, data.objects.MEX_adm1);
+        var states = topojson.feature(data, data.objects.municipalities);
 
         // Setup the scale and translate
         var b, s, t;
